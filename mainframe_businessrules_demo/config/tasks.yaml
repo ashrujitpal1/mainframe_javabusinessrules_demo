@@ -1,0 +1,43 @@
+javabrd_task:
+  description: >
+    Extract the core business rules from the following business rules.
+    Business Rules: {topic}
+    Transform the provided Mainframe-Oriented Business Rule Definition into a Modernized Business Rule Definition suitable for Java development. 
+    Provide a breakdown that includes:
+
+    Domain Analysis:
+
+    Identify the business capabilities and map them to DDD Subdomains.
+    Define Bounded Contexts to avoid ambiguity between services.
+    Entity and Context Mapping:
+
+    Redefine mainframe-oriented data structures (e.g., VSAM files, sequential files) as Entities, Value Objects, and Aggregates.
+    Map COBOL programs or procedures to potential Microservices.
+    Microservices Definition:
+
+    Suggest a microservices boundary for each business capability.
+    Define APIs, their contracts, and methods (e.g., REST, gRPC).
+    Technical Requirements:
+
+    Specify database migration steps (e.g., moving from IMS/VSAM to RDBMS or NoSQL).
+    Recommend caching mechanisms and eventual consistency strategies.
+    Event-Driven Recommendations:
+
+    Identify key business events (e.g., state changes or transactions).
+    Map these to Domain Events for event-driven architecture.
+    Integration Considerations:
+
+    Detail how to handle mainframe data during the transition (e.g., synchronization or hybrid integration).
+    Use APIs or data pipelines for seamless mainframe-Java integration.
+    Acceptance Criteria:
+
+    List specific functional and non-functional criteria to validate the modernization success.
+    Ensure the new Java-based system adheres to business logic while being scalable and maintainable.
+  expected_output:
+    A redefined business rule in the context of Java, microservices, and DDD.
+    Clear mappings from the mainframe context to the modernized domain model.
+    A list of suggested microservices with their respective APIs and responsibilities.
+    Technical recommendations for cloud-native implementation.
+    A sample design blueprint to guide developers.
+  agent: javabrdcreator
+

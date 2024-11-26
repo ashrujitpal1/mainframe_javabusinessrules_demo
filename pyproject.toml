@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "mainframe_businessrules_demo"
+version = "0.1.0"
+description = "mainframe-userstory-demo using crewAI"
+authors = ["Your Name <you@example.com>"]
+packages = [{include = "mainframe_businessrules_demo"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<=3.13"
+crewai = { extras = ["tools"], version = ">=0.70.1,<1.0.0" }
+chromadb = "^0.5.18"
+sentence-transformers = "^3.3.0"
+flask = "^3.1.0"
+
+
+[tool.poetry.scripts]
+mainframe_businessrules_demo = "mainframe_businessrules_demo.main:run"
+run_crew = "mainframe_businessrules_demo.main:run"
+train = "mainframe_businessrules_demo.main:train"
+replay = "mainframe_businessrules_demo.main:replay"
+test = "mainframe_businessrules_demo.main:test"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
